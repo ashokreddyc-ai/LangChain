@@ -6,7 +6,6 @@ chain = RunnableParallel(
     message=lambda x: f"Received: {x}"
 )
 
-
 result = chain.invoke("What is LangChain?")
 
 
