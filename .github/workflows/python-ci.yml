@@ -1,0 +1,22 @@
+name: Python Branch Demo
+
+on:
+  push:
+    branches:
+      - main
+      - 'feature/**'
+jobs:
+  run-app:
+    runs-on: ubuntu-22.04
+
+    steps:
+      - name: CheckOut repository
+        uses: actions/checkOut@v4
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-vesrion: "3.12"
+      - name: Display branch name
+        run: echo 'Current brach is $GITHUB_REF_NAME'
+      - name: Run Python application
+        run: python app.py
