@@ -1,4 +1,5 @@
-message = "Hello Ashok"
+message = "Hello Ashok welcome to the git hub actions"
 print(message)
-print('Application vesrion: 1.0')
+print('Application vesrion: 2.0')
+print("New greeting feature added")
 
